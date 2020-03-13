@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
+var Tracker = require('./helper/customTracker');
 
 var Speaker = new keystone.List('Speaker', {
   autokey: { from: 'name', path: 'slug', unique: true }
@@ -13,8 +13,7 @@ Speaker.add({
     required: true,
     unique: true
   },
-  createdAt: { type: Types.Datetime, default: Date.now },
-  updatedAt: { type: Types.Datetime, default: Date.now }
+  Tracker
 });
 
 Speaker.defaultSort = '-createdAt';

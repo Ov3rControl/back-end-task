@@ -5,6 +5,7 @@ exports.list = (req, res) => {
   Session.model
     .find({}, { slug: 0 })
     .limit(Number(req.query.limit))
+    .sort('createdAt')
     .populate({
       path: 'day stage tags speakers',
       select: 'name'

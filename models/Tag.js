@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
+var Tracker = require('./helper/customTracker');
 
 var Tag = new keystone.List('Tag', {
   autokey: { from: 'name', path: 'slug', unique: true }
@@ -13,8 +13,7 @@ Tag.add({
     required: true,
     unique: true
   },
-  createdAt: { type: Types.Datetime, default: Date.now },
-  updatedAt: { type: Types.Datetime, default: Date.now }
+  Tracker
 });
 
 Tag.defaultSort = '-createdAt';

@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
+var Tracker = require('./helper/customTracker');
 
 var Session = new keystone.List('Session', {
   autokey: { from: 'name', path: 'slug', unique: true }
@@ -47,8 +48,7 @@ Session.add({
     index: true,
     many: true
   },
-  createdAt: { type: Types.Datetime, default: Date.now },
-  updatedAt: { type: Types.Datetime, default: Date.now }
+  Tracker
 });
 
 // Prevents Adding Same Day Same Stage Sessions Twice
