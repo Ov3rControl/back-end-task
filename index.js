@@ -14,4 +14,11 @@ keystone.set('routes', require('./routes'));
 keystone.set('cors allow origin', true);
 keystone.set('cors allow methods', true);
 keystone.set('cors allow headers', true);
+
+keystone.set('nav', {
+  'Session-settings': ['days', 'speakers', 'stages', 'tags'],
+  Session: 'sessions',
+  admin: 'users'
+});
+
 keystone.start();
