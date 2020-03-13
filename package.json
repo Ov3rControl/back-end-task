@@ -1,0 +1,17 @@
+{
+  "name": "BackEnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mohamed Adel",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "sudo nodemon index.js"
+  },
+  "dependencies": {
+    "keystone": "^4.2.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
