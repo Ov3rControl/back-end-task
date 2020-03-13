@@ -22,7 +22,6 @@ exports = module.exports = app => {
 		</html>
 		`;
     }
-    // Send the html boilerplate
     res.send(renderFullPage());
   });
 };

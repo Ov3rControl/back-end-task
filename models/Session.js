@@ -30,11 +30,7 @@ Session.add({
     ref: 'Stage',
     many: false,
     index: true,
-    unique: true,
-    filters: {
-      'stage.id': ':_id' /* <--- filter */,
-      'stage.name': 'admited'
-    }
+    unique: true
   },
   description: {
     type: String
