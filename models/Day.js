@@ -1,18 +1,14 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 var Tracker = require('./helper/customTracker');
+var NameModel = require('./helper/customModelInhert');
+
 var Day = new keystone.List('Day', {
   autokey: { from: 'name', path: 'slug', unique: true }
 });
 
 Day.add({
-  name: {
-    type: Types.Date,
-    initial: true,
-    default: Date.now,
-    required: true,
-    unique: true
-  },
+  name: NameModel(Types.Date),
   Tracker
 });
 
