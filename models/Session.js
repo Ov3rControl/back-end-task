@@ -12,8 +12,7 @@ Session.add({
     type: Types.Relationship,
     ref: 'Day',
     index: true,
-    many: false,
-    unique: true
+    many: false
   },
   startingTime: {
     type: Types.Datetime,
@@ -30,8 +29,7 @@ Session.add({
     type: Types.Relationship,
     ref: 'Stage',
     many: false,
-    index: true,
-    unique: true
+    index: true
   },
   description: {
     type: String
@@ -50,12 +48,8 @@ Session.add({
   },
   Tracker
 });
-
 // Prevents Adding Same Day Same Stage Sessions Twice
-Session.schema.pre('save', next => {
-  Session.schema.index({ stage: 1, day: 1 }, { unique: true });
-  next();
-});
+Session.schema.index({ stage: 1, day: 1 }, { unique: true });
 
 Session.defaultSort = '-createdAt';
 Session.defaultColumns = 'name, day|20%, startingTime, endingTime stage';
