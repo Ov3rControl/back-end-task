@@ -10,6 +10,6 @@ User.add({
 User.schema.virtual('canAccessKeystone').get(function() {
   return true;
 });
-User.defaultColumns = 'displayName, email';
 
+User.defaultColumns = 'displayName, email';
 User.register();

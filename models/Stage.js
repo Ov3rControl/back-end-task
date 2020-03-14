@@ -11,5 +11,4 @@ Stage.add({
   Tracker
 });
 
-Stage.defaultSort = '-createdAt';
 Stage.register();

@@ -12,5 +12,4 @@ Day.add({
   Tracker
 });
 
-Day.defaultSort = '-createdAt';
 Day.register();

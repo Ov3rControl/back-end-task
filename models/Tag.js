@@ -11,5 +11,4 @@ Tag.add({
   Tracker
 });
 
-Tag.defaultSort = '-createdAt';
 Tag.register();

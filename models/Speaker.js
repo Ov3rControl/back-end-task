@@ -11,5 +11,4 @@ Speaker.add({
   Tracker
 });
 
-Speaker.defaultSort = '-createdAt';
 Speaker.register();
