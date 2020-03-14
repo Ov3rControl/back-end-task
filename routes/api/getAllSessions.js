@@ -15,7 +15,7 @@ exports.list = (req, res) => {
         session: data
       });
     })
-    .catch(function(err) {
+    .catch(err => {
       res.status(500).send(err.name);
     });
 };
