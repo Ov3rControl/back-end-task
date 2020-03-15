@@ -48,10 +48,9 @@ Session.add({
   },
   Tracker
 });
-// Prevents Adding Same Day Same Stage Sessions Twice
+// Prevents Adding Same Day Same Stage Same Starting & endingTime Sessions Twice
 Session.schema.index({ stage: 1, day: 1, startingTime: 1 }, { unique: true });
 Session.schema.index({ stage: 1, day: 1, endingTime: 1 }, { unique: true });
 
-Session.defaultSort = '-createdAt';
 Session.defaultColumns = 'name, day|20%, startingTime, endingTime stage';
 Session.register();

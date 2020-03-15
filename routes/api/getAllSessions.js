@@ -3,7 +3,7 @@ var Session = keystone.list('Session');
 
 exports.list = (req, res) => {
   Session.model
-    .find({}, { slug: 0 })
+    .find({}, { slug: 0, Tracker: 0, _v: 0 })
     .limit(Number(req.query.limit))
     .sort('createdAt')
     .populate({
